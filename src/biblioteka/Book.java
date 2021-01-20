@@ -7,6 +7,15 @@ public class Book {
     private boolean availability;
     private BookSection section;
 
+    public int getQuantityOfSpecifyBook() {
+        return quantityOfSpecifyBook;
+    }
+
+    public void setQuantityOfSpecifyBook(int quantityOfSpecifyBook) {
+        this.quantityOfSpecifyBook = quantityOfSpecifyBook;
+    }
+
+    public int quantityOfSpecifyBook=0;
 
     public Book(String title, Author author, int id, BookSection section){
         this.title=title;
@@ -30,7 +39,8 @@ public class Book {
     }
 
     public void setAuthor(Author author) {
-        this.author = author;
+        this.author.name = author.name;
+        this.author.surname=author.surname;
     }
 
     public int getID() {
@@ -49,8 +59,11 @@ public class Book {
         this.section = section;
     }
 
-    public boolean isAvailability() {
-        return availability;
+    public boolean isAvailable() {
+        if(this.availability==true)
+            return true;
+        else
+            return false;
     }
 
     public void setAvailability(boolean availability) {

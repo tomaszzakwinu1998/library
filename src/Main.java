@@ -1,7 +1,4 @@
-import biblioteka.Author;
-import biblioteka.Book;
-import biblioteka.BookSection;
-import biblioteka.ListOfBooks;
+import biblioteka.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -27,17 +24,34 @@ public class Main extends Application {
 
 
         Book encyklopedia=new Book("Encyklopedia", JanKowalski, 0, BookSection.HISTORICAL);
+        Book encyklopedia1=new Book("Encyklopedia", JanKowalski, 0, BookSection.HISTORICAL);
+
         //Book wiedzmin=new Book("Wiedzmin", "Andrzej Sapkowski", 1, BookSection.FANTASY);
         //Book wPustyniiwPuszczy=new Book("W postaci i w puszczy", "Henryk Sienkiewicz",2, BookSection.SCIENCE_FICTION);
 
         list.addNewBook(encyklopedia);
+        list.addNewBook(encyklopedia1);
+
+        System.out.println(encyklopedia.quantityOfSpecifyBook);
         //list.addNewBook(wiedzmin);
         //list.addNewBook(wPustyniiwPuszczy);
 
-        JanKowalski.showBooksOfSpecifyAuthor();
+        //JanKowalski.showBooksOfSpecifyAuthor();
 
         //list.showBooksInSection(BookSection.HISTORICAL);//pokaż książki w dziale
         //list.showBooksInLibrary();//pokaz wszystkie ksiazki
+
+        Reader michalTom=new Reader("Michal","Tomaszewski");
+        michalTom.borrowTheBook(encyklopedia);
+        michalTom.borrowTheBook(encyklopedia);
+        //System.out.println(michalTom.listOfLendingBooks.get(0).getBorrowBook().getTitle());
+        //System.out.println(encyklopedia.isAvailable());
+        System.out.println(encyklopedia.isAvailable());
+        //michalTom.borrowTheBook(encyklopedia);
+        michalTom.borrowTheBook(encyklopedia);
+        michalTom.borrowTheBook(encyklopedia);
+
+
         //launch(args);
 
     }

@@ -8,6 +8,7 @@ public class ListOfBooks {
     public void addNewBook(Book newBook) {
         if (isTheBookInTheLibrary(newBook) == false) {
             listOfBooks.add(newBook);
+            newBook.quantityOfSpecifyBook++;
             newBook.getAuthor().addBookToTheListOfSpecifyAuthor(newBook);
         }
     }
@@ -17,7 +18,8 @@ public class ListOfBooks {
 
         for (int i = 0; i < listOfBooks.size(); i++) {
             if (listOfBooks.get(i).getTitle().equals(book.getTitle())) {
-                System.out.println("Ta książka jest już w bibliotece");
+                System.out.println("This book is already in the library");
+                listOfBooks.get(i).quantityOfSpecifyBook++;
                 help = true;
             }
         }
