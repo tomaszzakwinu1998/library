@@ -1,5 +1,6 @@
 package library.gui.addbook;
 
+import biblioteka.BookSection;
 import biblioteka.ListOfBooks;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
@@ -56,7 +57,7 @@ public class BookAddController implements Initializable {
             return;
         }
 
-        biblioteka.Book nowa_ksiazka=new Book(bookTitle, bookAuthor, bookId);
+        biblioteka.Book nowa_ksiazka=new Book(bookTitle, bookAuthor, bookId, BookSection.FANTASY);
         int size_before=lista.listOfBooks.size();
         lista.addNewBook(nowa_ksiazka);
 
