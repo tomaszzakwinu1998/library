@@ -10,8 +10,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import library.ui.addbook.BookAddController;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -39,6 +41,9 @@ public class BookListController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
+    }
+    public void initCol(){
+        //title.setCellFactory(new PropertyValueFactory<>());
     }
 
 

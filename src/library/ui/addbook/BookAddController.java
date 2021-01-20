@@ -30,14 +30,16 @@ public class BookAddController implements Initializable {
     @FXML
     private JFXButton cancelButton;
 
-    biblioteka.listOfBooks lista=new listOfBooks();
+    public biblioteka.listOfBooks lista=new listOfBooks();
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
     }
-
+    public biblioteka.listOfBooks getList(){
+        return lista;
+    }
 
     public void addBook(javafx.event.ActionEvent actionEvent) {
         Integer bookId;
