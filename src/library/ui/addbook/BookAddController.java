@@ -27,12 +27,14 @@ public class BookAddController implements Initializable {
     @FXML
     private JFXButton cancelButton;
 
+    biblioteka.listOfBooks lista=new listOfBooks();
+
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
     }
 
-    biblioteka.listOfBooks lista=new listOfBooks();
 
     public void addBook(javafx.event.ActionEvent actionEvent) {
         Integer bookId;
@@ -51,7 +53,7 @@ public class BookAddController implements Initializable {
 
         biblioteka.Book nowa_ksiazka=new Book(bookTitle, bookAuthor, bookId);
         int size_before=lista.listOfBooks.size();
-        lista.listOfBooks.add(nowa_ksiazka);
+        lista.addNewBook(nowa_ksiazka);
 
         if(lista.listOfBooks.size()!=size_before){
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -65,7 +67,7 @@ public class BookAddController implements Initializable {
             alert.setContentText("failed");
             alert.showAndWait();
         }
-        System.out.println(lista.listOfBooks.size());
+        System.out.println(lista.listOfBooks.get(0).getTitle());
 
     }
 
