@@ -1,5 +1,6 @@
 package library.gui.addbook;
 
+import biblioteka.Author;
 import biblioteka.BookSection;
 import biblioteka.ListOfBooks;
 import com.jfoenix.controls.JFXButton;
@@ -41,12 +42,13 @@ public class BookAddController implements Initializable {
     public ListOfBooks getList(){
         return lista;
     }
-
+/*
     public void addBook(javafx.event.ActionEvent actionEvent) {
         Integer bookId;
         String bookIdString=id.getText();
         bookId=Integer.parseInt(bookIdString);
-        String bookAuthor=author.getText();
+        Author author1;
+        String name=author.getText();
         String bookTitle=title.getText();
 
         if(bookId==null||bookAuthor.isEmpty()||bookTitle.isEmpty()){
@@ -57,7 +59,7 @@ public class BookAddController implements Initializable {
             return;
         }
 
-        biblioteka.Book nowa_ksiazka=new Book(bookTitle, bookAuthor, bookId, BookSection.FANTASY);
+        biblioteka.Book nowa_ksiazka=new Book(bookTitle, author1, bookId, BookSection.FANTASY);
         int size_before=lista.listOfBooks.size();
         lista.addNewBook(nowa_ksiazka);
 
@@ -75,7 +77,7 @@ public class BookAddController implements Initializable {
         }
         System.out.println(lista.listOfBooks.get(0).getTitle());
 
-    }
+    }*/
 
     public void cancel(ActionEvent actionEvent) {
         Stage stage = (Stage) rootPane.getScene().getWindow();

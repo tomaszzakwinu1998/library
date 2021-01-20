@@ -1,3 +1,4 @@
+import biblioteka.Author;
 import biblioteka.Book;
 import biblioteka.BookSection;
 import biblioteka.ListOfBooks;
@@ -20,17 +21,23 @@ public class Main extends Application {
 
 
     public static void main(String[] args) {
-        Book encyklopedia=new Book("Encyklopedia", "Jan Kowalski", 0, BookSection.HISTORICAL);
-        Book wiedzmin=new Book("Wiedzmin", "Andrzej Sapkowski", 1, BookSection.FANTASY);
-        Book wPustyniiwPuszczy=new Book("W postaci i w puszczy", "Henryk Sienkiewicz",2, BookSection.SCIENCE_FICTION);
 
         ListOfBooks list=new ListOfBooks();
-        list.addNewBook(encyklopedia);
-        list.addNewBook(wiedzmin);
-        list.addNewBook(wPustyniiwPuszczy);
+        Author JanKowalski=new Author("Jan", "Kowalski");
 
-        list.showBooksInSection(BookSection.FANTASY);//pokaż książki w dziale
-        list.showBooksInLibrary();//pokaz wszystkie ksiazki
+
+        Book encyklopedia=new Book("Encyklopedia", JanKowalski, 0, BookSection.HISTORICAL);
+        //Book wiedzmin=new Book("Wiedzmin", "Andrzej Sapkowski", 1, BookSection.FANTASY);
+        //Book wPustyniiwPuszczy=new Book("W postaci i w puszczy", "Henryk Sienkiewicz",2, BookSection.SCIENCE_FICTION);
+
+        list.addNewBook(encyklopedia);
+        //list.addNewBook(wiedzmin);
+        //list.addNewBook(wPustyniiwPuszczy);
+
+        JanKowalski.showBooksOfSpecifyAuthor();
+
+        //list.showBooksInSection(BookSection.HISTORICAL);//pokaż książki w dziale
+        //list.showBooksInLibrary();//pokaz wszystkie ksiazki
         //launch(args);
 
     }
