@@ -12,6 +12,8 @@ import java.util.ResourceBundle;
 
 import biblioteka.Book;
 import javafx.scene.control.Alert;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 public class BookAddController implements Initializable {
 
@@ -22,6 +24,7 @@ public class BookAddController implements Initializable {
     @FXML
     private JFXTextField author;
     @FXML
+    private AnchorPane rootPane;
 
     private JFXButton saveButton;
     @FXML
@@ -72,5 +75,7 @@ public class BookAddController implements Initializable {
     }
 
     public void cancel(ActionEvent actionEvent) {
+        Stage stage = (Stage) rootPane.getScene().getWindow();
+        stage.close();
     }
 }

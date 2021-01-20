@@ -6,6 +6,7 @@ public class Book {
     private String title;
     private String author;
     private int id;
+    private boolean availability;
     private bookSection section;
 
 
@@ -13,6 +14,8 @@ public class Book {
         this.title=title;
         this.author=author;
         this.id=id;
+        this.availability=true;
+
     }
 
     public String getTitle() {
