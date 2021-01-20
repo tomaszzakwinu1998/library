@@ -39,7 +39,7 @@ public class Main extends Application {
         //JanKowalski.showBooksOfSpecifyAuthor();
 
         //list.showBooksInSection(BookSection.HISTORICAL);//pokaż książki w dziale
-        //list.showBooksInLibrary();//pokaz wszystkie ksiazki
+        list.showBooksInLibrary();//pokaz wszystkie ksiazki
 
         Reader michalTom=new Reader("Michal","Tomaszewski");
         michalTom.borrowTheBook(encyklopedia);
@@ -52,6 +52,15 @@ public class Main extends Application {
         michalTom.borrowTheBook(encyklopedia);
 
 
+        michalTom.returnTheBook(michalTom.listOfLendingBooks.get(0));
+        michalTom.returnTheBook(michalTom.listOfLendingBooks.get(0));
+
+        try {
+            michalTom.returnTheBook(michalTom.listOfLendingBooks.get(0));
+        }
+        catch(IndexOutOfBoundsException e){
+            System.out.println("YOU DONT HAVE ANY BOOKS :) EVERYTHING IS OK :)" );
+        }
         //launch(args);
 
     }

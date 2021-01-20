@@ -17,7 +17,7 @@ public class Reader extends Person {
             Date dt = new Date();
             Calendar c = Calendar.getInstance();
             c.setTime(dt);
-            c.add(Calendar.DATE, 7);
+            c.add(Calendar.DATE, 14);
             dt = c.getTime();
             Borrowing newBookToBorrow=new Borrowing(borrowBook, dt);
             listOfLendingBooks.add(newBookToBorrow);
@@ -30,8 +30,26 @@ public class Reader extends Person {
         System.out.println("This book is not available");
         return false;
     }
-    public boolean returnTheBook(){
-        
+    public boolean returnTheBook(Borrowing borrowing){
 
+            if (borrowing != null) {
+                borrowing.borrowBook.quantityOfSpecifyBook++;
+                if (borrowing.borrowBook.getQuantityOfSpecifyBook() == 0)
+                    borrowing.borrowBook.setAvailability(true);
+        /*int index;
+        for(int i=0; i<listOfLendingBooks.size(); i++){
+            if(borrowing.borrowBook.equals(listOfLendingBooks.get(i))){
+                index=i;
+            }
+        }*/
+                listOfLendingBooks.remove(borrowing);
+                System.out.println("You return the book successfully");
+                return true;
+            } else
+                return false;
     }
+
+
+
 }
+
