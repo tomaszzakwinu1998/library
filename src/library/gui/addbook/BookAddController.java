@@ -1,6 +1,6 @@
-package library.ui.addbook;
+package library.gui.addbook;
 
-import biblioteka.listOfBooks;
+import biblioteka.ListOfBooks;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
@@ -30,14 +30,14 @@ public class BookAddController implements Initializable {
     @FXML
     private JFXButton cancelButton;
 
-    public biblioteka.listOfBooks lista=new listOfBooks();
+    public ListOfBooks lista=new ListOfBooks();
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
     }
-    public biblioteka.listOfBooks getList(){
+    public ListOfBooks getList(){
         return lista;
     }
 

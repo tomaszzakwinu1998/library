@@ -1,13 +1,11 @@
 package biblioteka;
 
-import java.util.ArrayList;
-
 public class Book {
     private String title;
     private String author;
     private int id;
     private boolean availability;
-    private bookSection section;
+    private BookSection section;
 
 
     public Book(String title, String author, int id){

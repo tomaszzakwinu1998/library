@@ -2,7 +2,7 @@ package biblioteka;
 
 import java.util.ArrayList;
 
-public class listOfBooks {
+public class ListOfBooks {
     public ArrayList<Book> listOfBooks =new ArrayList<Book>();
     public void addNewBook(Book newBook){
         if(isTheBookInTheLibrary(newBook)==false)

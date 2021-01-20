@@ -1,19 +1,12 @@
-package library.ui.listbook;
+package library.gui.listbook;
 
-import biblioteka.Book;
-import biblioteka.listOfBooks;
-import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import library.ui.addbook.BookAddController;
 
 import java.net.URL;
 import java.util.ResourceBundle;
