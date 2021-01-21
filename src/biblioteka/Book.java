@@ -55,11 +55,11 @@ public class Book {
      * @param section sekcja podawana podczas dodawania ksiazki
      */
     public Book(String title, Author author, int id, BookSection section){
-        this.title=title;
-        this.author=author;
-        this.id=id;
-        this.availability=true;
-        this.section=section;
+        this.title = title;
+        this.author = author;
+        this.id = id;
+        this.availability = true;
+        this.section = section;
 
     }
     /**
@@ -89,7 +89,7 @@ public class Book {
      */
     public void setAuthor(Author author) {
         this.author.name = author.name;
-        this.author.surname=author.surname;
+        this.author.surname = author.surname;
     }
     /**
      * zwraca identyfikator
@@ -124,7 +124,7 @@ public class Book {
      * @return zmienna boolean wskazujaca czy książka jest dostępna czy nie
      */
     public boolean isAvailable() {
-        if(this.availability==true)
+        if(this.availability == true)
             return true;
         else
             return false;

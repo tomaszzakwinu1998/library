@@ -22,9 +22,9 @@ public class Borrowing {
      */
     public Borrowing(Book bookToBorrow, Date date){
 
-        this.borrowBook=bookToBorrow;
+        this.borrowBook = bookToBorrow;
         this.borrowBook.setTitle(bookToBorrow.getTitle());
-        this.dateOfReturns=date;
+        this.dateOfReturns = date;
     }
     /**
      * zwraca ksiazke ktorej dotyczy wypozyczenie

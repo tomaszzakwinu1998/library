@@ -22,7 +22,7 @@ public class Reader extends Person {
         /**
          * czy podana książka jest dostępna w bibliotece
          */
-        if(borrowBook.isAvailable()==true) {
+        if(borrowBook.isAvailable() == true) {
             /**
              * dokładna data kiedy czytelnik wypożycza książkę
              */
@@ -46,7 +46,7 @@ public class Reader extends Person {
             /**
              * jeśli ilość ezgempplarzy ksiazki to zero, ksiązka nie jest dostepna
              */
-            if(borrowBook.getQuantityOfSpecifyBook()==0)
+            if(borrowBook.getQuantityOfSpecifyBook() == 0)
                 borrowBook.setAvailability(false);
             System.out.println("You succesfully borrow the book! You have to return it before: "  + dt);
             /**
@@ -94,7 +94,7 @@ public class Reader extends Person {
             Borrowing newBookToBorrow=new Borrowing(book, dt);
             listOfReservations.add(newBookToBorrow);
             book.quantityOfSpecifyBook--;
-            if(book.getQuantityOfSpecifyBook()==0)
+            if(book.getQuantityOfSpecifyBook() == 0)
                 book.setAvailability(false);
             System.out.println("You succesfully reserve the book! You have to borrow it before: "  + dt);
             return true;

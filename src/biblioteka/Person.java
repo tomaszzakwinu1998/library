@@ -20,7 +20,7 @@ public class Person {
      * @param surname Nazwisko podawnane przy tworzeniu nowego konta klienta systemu
      */
     Person(String name, String surname){
-        this.name=name;
-        this.surname=surname;
+        this.name = name;
+        this.surname = surname;
     }
 }
