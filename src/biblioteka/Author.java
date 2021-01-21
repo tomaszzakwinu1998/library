@@ -3,6 +3,8 @@ package biblioteka;
 import java.util.ArrayList;
 
 public class Author extends Person {
+
+
     public ArrayList<Book> listOfBooksOfSpecifyAuthor = new ArrayList<Book>();
 
     public Author(String name, String surname){
@@ -28,5 +30,8 @@ public class Author extends Person {
         return true;
     else
         return false;
+    }
+    public ArrayList<Book> getListOfBooksOfSpecifyAuthor() {
+        return listOfBooksOfSpecifyAuthor;
     }
 }
