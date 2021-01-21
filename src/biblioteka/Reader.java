@@ -5,14 +5,36 @@ import java.util.Calendar;
 import java.util.Date;
 
 
+/**
+ * Klasa reprezentująca czytelnika
+ */
 public class Reader extends Person {
+
+    /**
+     * lista wypozyczonych ksiazek
+     */
     public ArrayList<Borrowing> listOfLendingBooks = new ArrayList<Borrowing>();
+
+    /**
+     * Lista zarezerwowanych ksiazek
+     */
     public ArrayList<Borrowing> listOfReservations = new ArrayList<Borrowing>();
 
+
+    /**
+     * dwuargumentowy konstruktor tworzacy nowego czytelnika
+     * @param name imie
+     * @param surname nazwisko
+     */
     public Reader(String name, String surname){
         super(name, surname);
     }
 
+
+    /**
+     * funkcja umozliwiajaca wypozyczenie ksiazki
+     * @param borrowBook ksiazka do wypozyczenia
+     */
     public boolean borrowTheBook(Book borrowBook){
         if(borrowBook.isAvailable()==true) {
             Date dt = new Date();
@@ -32,6 +54,12 @@ public class Reader extends Person {
         System.out.println("This book is not available");
         return false;
     }
+
+    /**
+     * funkcja umożliwiająca oddanie książki
+     * @param borrowing wypozyczenie
+     * @return zwraca true jesli poprawnie zwrocono ksiazke
+     */
     public boolean returnTheBook(Borrowing borrowing){
 
             if (borrowing != null) {
@@ -55,6 +83,12 @@ public class Reader extends Person {
             } else
                 return false;
     }
+
+    /**
+     * funkcja umozliwiajaca rezerwacje książki
+     * @param book ksiazka do zarezerwowania
+     * @return zwraca boolean okreslajacy czy ksiazke poprawnie zarezerwowano
+     */
     public boolean reserveTheBook(Book book){
         if(book.isAvailable()==true) {
             Date dt = new Date();

@@ -1,7 +1,7 @@
 package biblioteka;
 
 /**
- * Klasa reprezntująca dowolnego klienta systemu, będzie rozszerzana poprzez inne klasy
+ * Klasa reprezentująca dowolnego klienta systemu, będzie rozszerzana poprzez inne klasy
  */
 public class Person {
     /**
