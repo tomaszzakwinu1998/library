@@ -66,7 +66,8 @@ public class Reader extends Person {
                 borrowing.borrowBook.quantityOfSpecifyBook++;
                 if (borrowing.borrowBook.getQuantityOfSpecifyBook() == 0)
                     borrowing.borrowBook.setAvailability(true);
-        /*int index;
+                //nie wiedzialem, że można dać remove(obiekt, który chcemy usunać i ze samo porónuje)
+                /*int index;
         for(int i=0; i<listOfLendingBooks.size(); i++){
             if(borrowing.borrowBook.equals(listOfLendingBooks.get(i))){
                 index=i;

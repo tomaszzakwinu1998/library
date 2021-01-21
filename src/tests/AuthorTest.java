@@ -20,7 +20,8 @@ public class AuthorTest {
     @Before
     public void setUp(){
         testAuthor=new Author("Marian", "Kowalski");
-        testBook=new Book("Wiedzmin", testAuthor, 0, BookSection.FANTASY);
+        testBook=new Book("Wiedzmin", testAuthor,
+                0, BookSection.FANTASY);
 
     }
     @Test

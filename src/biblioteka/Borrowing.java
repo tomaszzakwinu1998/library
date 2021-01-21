@@ -20,7 +20,7 @@ public class Borrowing {
      * @param bookToBorrow ksiazka ktorej dotyczy wypozyczenie
      * @param date data do ktorej nalezy zwrocic ksiazke
      */
-    Borrowing(Book bookToBorrow, Date date){
+    public Borrowing(Book bookToBorrow, Date date){
 
         this.borrowBook=bookToBorrow;
         this.borrowBook.setTitle(bookToBorrow.getTitle());

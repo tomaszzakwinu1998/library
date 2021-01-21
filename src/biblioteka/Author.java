@@ -45,7 +45,8 @@ public class Author extends Person {
      */
     public boolean equals(Object o) {
         Author other = (Author) o; //CASTING
-        if (this.name.equals(other.name)&&this.surname.equals(other.surname))
+        if (this.name.equals(other.name)
+                &&this.surname.equals(other.surname))
         return true;
     else
         return false;

@@ -52,7 +52,9 @@ public class ListOfBooks {
      */
     public void showBooksInLibrary() {
         for (int i = 0; i < listOfBooks.size(); i++) {
-            System.out.println("Title: " + listOfBooks.get(i).getTitle() + "      Author: " + listOfBooks.get(i).getAuthor().name+" "+listOfBooks.get(i).getAuthor().surname);
+            System.out.println("Title: " + listOfBooks.get(i).getTitle() +
+                    "      Author: " + listOfBooks.get(i).getAuthor().name+
+                    " "+listOfBooks.get(i).getAuthor().surname);
 
         }
     }
@@ -65,7 +67,8 @@ public class ListOfBooks {
         for (int i = 0; i < listOfBooks.size(); i++) {
 
             if (listOfBooks.get(i).getSection() == section) {
-                System.out.println("Title: " + listOfBooks.get(i).getTitle() + "      Author: " + listOfBooks.get(i).getAuthor());
+                System.out.println("Title: " + listOfBooks.get(i).getTitle()
+                        + "      Author: " + listOfBooks.get(i).getAuthor());
             }
         }
     }
