@@ -13,23 +13,51 @@ public class Reader extends Person {
         super(name, surname);
     }
 
+    /**
+     * funkcja pozwalająca czytelnikowi wypożyczyć książkę
+     * @param borrowBook książka, którą chce wypożyczyć czytelnik
+     * @return czy książka została wypożyczona
+     */
     public boolean borrowTheBook(Book borrowBook){
+        /**
+         * czy podana książka jest dostępna w bibliotece
+         */
         if(borrowBook.isAvailable()==true) {
+            /**
+             * dokładna data kiedy czytelnik wypożycza książkę
+             */
             Date dt = new Date();
-
+            /**
+             * dodaje do aktualnej daty 14 dni aby określić data zwrotu książki
+             */
             Calendar c = Calendar.getInstance();
             c.setTime(dt);
             c.add(Calendar.DATE, 14);
             dt = c.getTime();
             Borrowing newBookToBorrow=new Borrowing(borrowBook, dt);
+            /**
+             * dodaje wypożyczenie do wypożyczeń czytelnika
+             */
             listOfLendingBooks.add(newBookToBorrow);
+            /**
+             * zmniejsza ilość dostępnych egzemplarzy wypożyczonej książki
+             */
             borrowBook.quantityOfSpecifyBook--;
+            /**
+             * jeśli ilość ezgempplarzy ksiazki to zero, ksiązka nie jest dostepna
+             */
             if(borrowBook.getQuantityOfSpecifyBook()==0)
                 borrowBook.setAvailability(false);
             System.out.println("You succesfully borrow the book! You have to return it before: "  + dt);
+            /**
+             * czy ksiazka wypozyczona
+             */
             return true;
         }
         System.out.println("This book is not available");
+        /**
+         * czy ksiazka wypozyczona
+         */
         return false;
     }
     public boolean returnTheBook(Borrowing borrowing){
@@ -44,7 +72,7 @@ public class Reader extends Person {
                 index=i;
             }
         }*/
-        //da się ale jak wykonać dwie rzeczy nie w tym samym momencie xDDDD
+        //da się ale jak wykonać dwie rzeczy nie w tym samym momencie
                 /*
                 Date dt = new Date();
                 if(borrowing.dateOfReturns.after(dt)==true);
